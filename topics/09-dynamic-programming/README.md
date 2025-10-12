@@ -107,13 +107,22 @@ function matrixChainOrder(dims) {
 
 ## Problems in This Section
 
-### Basic
-- [Climbing Stairs](problems/climbing-stairs.md) - Classic DP introduction
+### Fundamental DP
+- [Climbing Stairs](problems/climbing-stairs.md) - Classic DP introduction ⭐
+- [House Robber](problems/house-robber.md) - Max non-adjacent sum ⭐
+- [Maximum Subarray](problems/maximum-subarray.md) - Kadane's algorithm ⭐
 
-### Intermediate
-- [Longest Increasing Subsequence](problems/longest-increasing-subsequence.md) - Sequence DP
-- [Coin Change](problems/coin-change.md) - Unbounded knapsack
-- [Word Break](problems/word-break.md) - String DP
+### Grid & Path DP
+- [Unique Paths](problems/unique-paths.md) - Grid traversal counting ⭐
+
+### String & Sequence DP
+- [Edit Distance](problems/edit-distance.md) - Levenshtein distance ⭐
+- [Longest Increasing Subsequence](problems/longest-increasing-subsequence.md) - Classic sequence DP ⭐
+- [Word Break](problems/word-break.md) - String segmentation ⭐
+
+### Knapsack Problems
+- [0/1 Knapsack](problems/knapsack.md) - Fundamental knapsack problem ⭐
+- [Coin Change](problems/coin-change.md) - Unbounded knapsack variant ⭐
 
 ## Classic DP Problems
 

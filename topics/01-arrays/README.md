@@ -217,11 +217,23 @@ function productExceptSelf(nums) {
 
 ## 📝 Practice Problems in This Section
 
-1. [Two Sum](./problems/two-sum.md) - Classic hash map pattern
-2. [A Very Big Sum](./problems/very-big-sum.md) - Handle large numbers
-3. [Designer PDF Viewer](./problems/designer-pdf-viewer.md) - Array manipulation
-4. [Left Rotation](./problems/left-rotation.md) - Array rotation techniques
-5. [Sparse Arrays](./problems/sparse-arrays.md) - Frequency counting
+### Two-Pointer Techniques
+1. [Two Sum](./problems/two-sum.md) - Classic hash map pattern ⭐
+2. [Three Sum](./problems/three-sum.md) - Extended two-pointer problem ⭐
+3. [Container With Most Water](./problems/container-with-most-water.md) - Maximize area ⭐
+4. [Remove Duplicates from Sorted Array](./problems/remove-duplicates-sorted.md) - In-place modification
+5. [Valid Palindrome II](./problems/valid-palindrome-ii.md) - String manipulation with deletion
+6. [Move Zeroes](./problems/move-zeroes.md) - In-place partitioning
+
+### Advanced Techniques
+7. [Sliding Window Maximum](./problems/sliding-window-maximum.md) - Deque optimization ⭐
+8. [Trapping Rain Water](./problems/trapping-rain-water.md) - Complex two-pointer ⭐
+
+### Fundamental Problems
+9. [A Very Big Sum](./problems/very-big-sum.md) - Handle large numbers
+10. [Designer PDF Viewer](./problems/designer-pdf-viewer.md) - Array manipulation
+11. [Left Rotation](./problems/left-rotation.md) - Array rotation techniques
+12. [Sparse Arrays](./problems/sparse-arrays.md) - Frequency counting
 
 ## 🎯 Mastery Checklist
 
