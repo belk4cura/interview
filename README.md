@@ -1,108 +1,170 @@
-# AWS Interview Study Guide - Senior Engineer Level
+# 🚀 JavaScript Technical Interview Study Guide
 
-## 📚 Overview
-This comprehensive study guide is designed for senior engineer interviews at AWS and other cloud-focused companies. It covers essential data structures, algorithms, system design principles, and scalability patterns with JavaScript code examples.
+A comprehensive collection of **59 coding problems** with detailed JavaScript solutions, explanations, and complexity analysis. Perfect for preparing for FAANG and other technical interviews.
 
-## 🎯 Target Audience
-- Senior Software Engineers (5+ years experience)
-- Solutions Architects preparing for AWS interviews
-- Engineers transitioning to cloud-focused roles
+## 📁 Repository Structure
 
-## 📖 Study Guide Structure
+```
+interview/
+├── topics/                    # All problems organized by topic
+│   ├── 00-complexity/         # Time/Space complexity problems
+│   ├── 01-arrays/            # Array manipulation problems
+│   ├── 02-linked-lists/      # Linked list problems
+│   ├── 03-stacks-queues/     # Stack and queue problems
+│   ├── 04-hash-maps/         # Hash map problems
+│   ├── 05-trees/             # Tree and BST problems
+│   ├── 06-graphs/            # Graph algorithms
+│   ├── 07-sorting-searching/ # Sorting and searching
+│   ├── 08-recursion/         # Recursion problems
+│   └── 09-dynamic-programming/ # DP problems
+│
+├── coursework-master/         # Original Java problems (reference)
+└── Old markdown files         # Legacy content (being phased out)
+```
 
-### 🌟 Start Here - Fundamentals
-**[Understanding Complexity](./00-complexity-explained.md)** - Big O notation explained like you're five, with visual examples and AWS cost implications
+## 🎯 Quick Start
 
-### Core Data Structures
-1. **[Arrays and Lists](./01-arrays-and-lists.md)** - Dynamic arrays, linked lists, and their AWS applications
-2. **[Trees and Graphs](./02-trees-and-graphs.md)** - Binary trees, BST, graphs, and network topologies
-3. **[Hash Maps and Sets](./03-hash-maps-and-sets.md)** - Hash tables, collision resolution, and caching strategies
-4. **[Queues and Stacks](./04-queues-and-stacks.md)** - FIFO/LIFO structures, priority queues, and message systems
+### [📚 Browse All Problems by Topic](topics/)
 
-### Algorithms
-5. **[Searching and Sorting](./05-searching-and-sorting.md)** - Binary search, sorting algorithms, and query optimization
-6. **[Divide and Conquer](./06-divide-and-conquer.md)** - Recursive strategies and distributed processing
-7. **[Graph Algorithms](./07-graph-algorithms.md)** - BFS vs DFS, shortest paths, and network routing
+The main study guide is in the `topics/` folder with problems organized by data structure and algorithm type.
 
-### System Design & Scalability
-8. **[Scalability Patterns](./08-scalability-patterns.md)** - Horizontal scaling, redundancy, and partitioning
-9. **[Caching and Performance](./09-caching-and-performance.md)** - Cache strategies, CDNs, and database optimization
-10. **[Distributed Systems](./10-distributed-systems.md)** - Load balancing, queues, and consistency models
+## 📊 Content Overview
 
-## 🔑 Key Learning Objectives
-- Master runtime complexity analysis (Big O notation)
-- Understand memory usage patterns and optimization
-- Apply data structures to real-world AWS services
-- Design scalable and fault-tolerant systems
-- Optimize for both performance and cost
+### Total Problems: 59
 
-## 💡 Study Tips
-1. **Practice Daily**: Spend 1-2 hours daily on different topics
-2. **Code Everything**: Don't just read - implement each data structure
-3. **Think Cloud-Native**: Always consider distributed system implications
-4. **Mock Interviews**: Practice explaining your solutions out loud
-5. **System Design**: Draw architecture diagrams for every solution
+| Topic | Count | Difficulty Distribution |
+|-------|-------|------------------------|
+| Complexity Analysis | 4 | Conceptual |
+| Arrays | 7 | 3 Easy, 2 Medium, 2 Hard |
+| Linked Lists | 6 | 3 Easy, 2 Medium, 1 Hard |
+| Stacks & Queues | 7 | 2 Easy, 3 Medium, 2 Hard |
+| Hash Maps | 7 | 3 Easy, 3 Medium, 1 Hard |
+| Trees | 9 | 3 Easy, 4 Medium, 2 Hard |
+| Graphs | 6 | 2 Easy, 3 Medium, 1 Hard |
+| Sorting & Searching | 6 | 2 Easy, 2 Medium, 2 Hard |
+| Recursion | 3 | 1 Easy, 2 Hard |
+| Dynamic Programming | 4 | 1 Easy, 3 Medium |
 
-## 🛠️ JavaScript Environment Setup
-All code examples are written in modern JavaScript (ES6+) and can be run in:
-- Node.js 14+ 
-- Browser console
-- Online editors like CodePen or JSFiddle
+## 🎓 Study Path
 
-## 📊 Complexity Cheat Sheet
+### Beginner (Week 1-2)
+1. Start with [Complexity Analysis](topics/00-complexity/)
+2. Master [Arrays](topics/01-arrays/) - Two pointers, sliding window
+3. Learn [Basic Linked Lists](topics/02-linked-lists/)
 
-| Data Structure | Access | Search | Insert | Delete | Space |
-|---------------|--------|---------|---------|---------|--------|
-| Array | O(1) | O(n) | O(n) | O(n) | O(n) |
-| Linked List | O(n) | O(n) | O(1) | O(1) | O(n) |
-| Hash Table | N/A | O(1)* | O(1)* | O(1)* | O(n) |
-| BST | O(log n)* | O(log n)* | O(log n)* | O(log n)* | O(n) |
-| Heap | O(1) | O(n) | O(log n) | O(log n) | O(n) |
+### Intermediate (Week 3-4)
+1. [Stacks & Queues](topics/03-stacks-queues/)
+2. [Hash Maps](topics/04-hash-maps/) for optimization
+3. [Binary Trees](topics/05-trees/) - Traversals and BST
 
-*Average case; worst case may differ
+### Advanced (Week 5-6)
+1. [Graph Algorithms](topics/06-graphs/) - BFS, DFS, shortest path
+2. [Sorting & Searching](topics/07-sorting-searching/) - Binary search variants
+3. [Recursion](topics/08-recursion/) patterns
 
-## 🚀 AWS Services Quick Reference
-- **Compute**: EC2, Lambda, ECS, EKS
-- **Storage**: S3, EBS, EFS, Glacier
-- **Database**: RDS, DynamoDB, ElastiCache, Redshift
-- **Networking**: VPC, CloudFront, Route 53, API Gateway
-- **Messaging**: SQS, SNS, EventBridge, Kinesis
-- **Management**: CloudWatch, CloudFormation, Systems Manager
+### Expert (Week 7-8)
+1. [Dynamic Programming](topics/09-dynamic-programming/)
+2. Advanced tree and graph problems
+3. System design patterns
 
-## 📝 Interview Preparation Checklist
-- [ ] Review all 10 study guide sections
-- [ ] Implement each data structure from scratch
-- [ ] Solve 5 practice problems per topic
-- [ ] Design 3 complete systems end-to-end
-- [ ] Practice explaining solutions verbally
-- [ ] Review AWS Well-Architected Framework
-- [ ] Understand cost optimization strategies
-- [ ] Practice whiteboard coding
+## 🔥 Top 20 Must-Know Problems
 
-## 🎓 Learning Path Recommendation
-**Week 1-2**: Data Structures (Files 1-4)
-**Week 3-4**: Algorithms (Files 5-7)
-**Week 5-6**: System Design (Files 8-10)
-**Week 7-8**: Practice problems and mock interviews
+These appear most frequently in FAANG interviews:
+
+1. **Two Sum** - Array, HashMap
+2. **Valid Parentheses** - Stack
+3. **Merge Two Sorted Lists** - Linked List
+4. **Binary Tree Level Order Traversal** - Tree, BFS
+5. **LRU Cache** - Design, HashMap, Doubly Linked List
+6. **Clone Graph** - Graph, DFS/BFS
+7. **Course Schedule** - Graph, Topological Sort
+8. **Kth Largest Element** - Heap, Quick Select
+9. **Longest Increasing Subsequence** - DP
+10. **Word Break** - DP, String
+11. **Sliding Window Maximum** - Deque, Heap
+12. **Trapping Rain Water** - Two Pointers
+13. **Lowest Common Ancestor** - Tree
+14. **Serialize/Deserialize Binary Tree** - Tree, Design
+15. **Group Anagrams** - HashMap, String
+16. **Longest Consecutive Sequence** - HashMap
+17. **Median of Two Sorted Arrays** - Binary Search
+18. **Min Stack** - Stack, Design
+19. **Coin Change** - DP
+20. **Network Delay Time** - Graph, Dijkstra
+
+## 💡 Problem Features
+
+Each problem includes:
+- ✅ **Problem Description** - Clear explanation with examples
+- ✅ **Multiple Solutions** - From brute force to optimal
+- ✅ **Line-by-Line Comments** - Understand every step
+- ✅ **Complexity Analysis** - Time and space
+- ✅ **Visual Explanations** - Diagrams and walkthroughs
+- ✅ **Common Pitfalls** - Avoid interview mistakes
+- ✅ **Related Problems** - Build on concepts
+
+## 🛠️ How to Use This Repository
+
+1. **Start with fundamentals** - Don't skip complexity analysis
+2. **Code along** - Don't just read, implement solutions
+3. **Understand patterns** - Focus on techniques, not memorization
+4. **Time yourself** - Practice under pressure (45 mins per problem)
+5. **Explain out loud** - Practice verbalizing your approach
+
+## 📈 Progress Tracking
+
+Create a checklist to track your progress:
+
+```markdown
+- [ ] Complexity Analysis (4 problems)
+- [ ] Arrays (7 problems)
+- [ ] Linked Lists (6 problems)
+- [ ] Stacks & Queues (7 problems)
+- [ ] Hash Maps (7 problems)
+- [ ] Trees (9 problems)
+- [ ] Graphs (6 problems)
+- [ ] Sorting & Searching (6 problems)
+- [ ] Recursion (3 problems)
+- [ ] Dynamic Programming (4 problems)
+```
+
+## 🎯 Interview Tips
+
+1. **Clarify the problem** - Ask about edge cases
+2. **Think out loud** - Share your thought process
+3. **Start with brute force** - Then optimize
+4. **Consider tradeoffs** - Time vs space
+5. **Test your code** - Walk through examples
+6. **Handle edge cases** - Empty, single element, duplicates
+
+## 📚 Additional Resources
+
+### Books
+- Cracking the Coding Interview
+- Elements of Programming Interviews
+- Algorithm Design Manual
+
+### Online Platforms
+- LeetCode (practice similar problems)
+- HackerRank (timed challenges)
+- CodeSignal (assessment practice)
+
+### Concepts to Review
+- Big O Notation
+- Data Structure Operations
+- Common Algorithm Patterns
+- System Design Basics
+
+## 🤝 Contributing
+
+Found an error or want to add a problem? Feel free to open a PR!
+
+## 📄 License
+
+This repository is for educational purposes. Problems are sourced from various platforms and books, with solutions and explanations created for learning.
 
 ---
 
-## 📌 Key Takeaways & Fixes Log
-*This section will be updated as you progress through the material*
+**Remember**: The key to interview success isn't memorizing solutions—it's understanding patterns and practicing problem-solving approaches. Good luck with your preparation! 🎉
 
-### Data Structures Insights
-- 
-
-### Algorithm Optimizations
-- 
-
-### System Design Patterns
-- 
-
-### Common Pitfalls Avoided
-- 
-
----
-
-*Last Updated: October 2025*
-*Version: 1.0*
+### [➡️ Start Learning Now](topics/)
