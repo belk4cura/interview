@@ -10,11 +10,21 @@ Analyze the space complexity of this merge sort implementation:
 
 ```javascript
 function mystery2(arr) {
+    // Base case: arrays with 0 or 1 element are already "sorted"
     if (arr.length <= 1) return arr;
     
+    // arr.slice(start, end) creates a NEW array (shallow copy) from index start to end (exclusive)
+    // This splits the array in half - takes elements from index 0 up to the middle
+    // Example: [1,2,3,4,5].slice(0, 2) → [1,2] (first half)
     const left = mystery2(arr.slice(0, Math.floor(arr.length / 2)));
+    
+    // arr.slice(start) with no end parameter goes to the end of the array
+    // This gets the second half - from middle to end
+    // Example: [1,2,3,4,5].slice(2) → [3,4,5] (second half)
     const right = mystery2(arr.slice(Math.floor(arr.length / 2)));
     
+    // Spread operator [...left, ...right] creates ANOTHER new array by combining both halves
+    // This is where merge sort would normally merge/sort, but this just concatenates
     return [...left, ...right];
 }
 ```

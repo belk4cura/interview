@@ -1,0 +1,218 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Meta Interview Prep//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Meta Interview Prep
+X-WR-TIMEZONE:America/New_York
+X-WR-CALDESC:30-hour study plan for Meta technical interview
+
+BEGIN:VEVENT
+DTSTART:20251014T130000
+DTEND:20251014T140000
+DTSTAMP:20251014T170000Z
+UID:meta-prep-0@interview
+SUMMARY:Complexity Analysis (Foundation)
+DESCRIPTION:Meta Topic 0: Understanding Big O Notation\n\nProblems to review:\n1. What's the Complexity - Analyze code snippets\n2. Space Complexity - Memory usage analysis\n3. Optimize This - Improve algorithm efficiency\n4. Calculate Total Complexity - Complex scenarios\n\nFocus: Understanding O(1)\, O(log n)\, O(n)\, O(n log n)\, O(n²)\n\nThis is CRITICAL - you need to analyze complexity for every problem!\n\nFiles:\n- topics/00-complexity/README.md\n- topics/00-complexity/problems/whats-the-complexity.md\n- topics/00-complexity/problems/space-complexity.md\n- topics/00-complexity/problems/optimize-this.md\n- topics/00-complexity/problems/calculate-total-complexity.md
+LOCATION:Study Session
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Start Complexity Analysis session in 15 minutes
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251014T140000
+DTEND:20251014T160000
+DTSTAMP:20251014T170000Z
+UID:meta-prep-1@interview
+SUMMARY:Arrays & Strings (3 problems)
+DESCRIPTION:Meta Topic 1: Arrays & Strings\n\nProblems to solve:\n1. Very Big Sum - Warm-up\n2. Designer PDF Viewer - Array manipulation\n3. Left Rotation - Array rotation\n\nFocus: Array manipulation and rotation techniques\n\nFiles:\n- topics/01-arrays/problems/very-big-sum.md\n- topics/01-arrays/problems/designer-pdf-viewer.md\n- topics/01-arrays/problems/left-rotation.md
+LOCATION:Study Session
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Start Arrays & Strings session in 15 minutes
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251014T160000
+DTEND:20251014T183000
+DTSTAMP:20251014T170000Z
+UID:meta-prep-2@interview
+SUMMARY:Hash Maps + Two Sum (3 problems)
+DESCRIPTION:Meta Topic 4: Hash Maps + Critical Addition\n\nPre-work: Watch Hash Tables video (15 min)\nhttps://www.youtube.com/watch?v=shs0KM3wKv8\n\nProblems to solve:\n1. Two Sum ⭐ CRITICAL - Most asked problem\n2. Ice Cream Parlor - Two sum variant\n3. Colorful Number - Challenging hash map\n\nFocus: Fast lookups\, O(1) access\, space-time tradeoff\n\nFiles:\n- topics/01-arrays/problems/two-sum.md\n- topics/04-hash-maps/problems/ice-cream-parlor.md\n- topics/04-hash-maps/problems/colorful-number.md
+LOCATION:Study Session
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Start Hash Maps session in 15 minutes
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251014T183000
+DTEND:20251014T203000
+DTSTAMP:20251014T170000Z
+UID:meta-prep-3@interview
+SUMMARY:Stacks & Queues (2 problems)
+DESCRIPTION:Meta Topic 3: Stacks & Queues\n\nPre-work: Watch Stacks and Queues video (15 min)\nhttps://www.youtube.com/watch?v=wjI1WNcIntg\n\nProblems to solve:\n1. Valid Parentheses (Balanced Brackets) - Classic stack\n2. Queue Using Two Stacks - Data structure design\n\nFocus: LIFO/FIFO patterns\, when to use each\n\nFiles:\n- topics/03-stacks-queues/problems/valid-parentheses.md\n- topics/03-stacks-queues/problems/implement-queue-using-stacks.md
+LOCATION:Study Session
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Start Stacks & Queues session in 15 minutes
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251014T203000
+DTEND:20251014T223000
+DTSTAMP:20251014T170000Z
+UID:meta-prep-4@interview
+SUMMARY:Linked Lists (3 problems)
+DESCRIPTION:Meta Topic 2: Linked Lists\n\nPre-work: Watch Linked Lists video (15 min)\nhttps://www.youtube.com/watch?v=WwfhLC16bis\n\nProblems to solve:\n1. Insert Node at Position - List manipulation\n2. Cycle Detection - Floyd's algorithm\n3. Merge Two Sorted Lists ⭐ CRITICAL - Merge pattern\n\nFocus: Pointer manipulation\, Floyd's cycle detection\n\nFiles:\n- topics/02-linked-lists/problems/insert-node-at-position.md\n- topics/02-linked-lists/problems/detect-cycle.md\n- topics/02-linked-lists/problems/merge-two-sorted-lists.md
+LOCATION:Study Session
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Start Linked Lists session in 15 minutes
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251014T220000
+DTEND:20251014T224500
+DTSTAMP:20251014T170000Z
+UID:meta-prep-5@interview
+SUMMARY:BONUS: Three Sum (Advanced Two Pointers)
+DESCRIPTION:Advanced Pattern Practice\n\nProblem to solve:\n1. Three Sum - Advanced two-pointers pattern\n\nFocus: Building on Two Sum\, handling duplicates\, two-pointer technique\n\nFile:\n- topics/01-arrays/problems/three-sum.md
+LOCATION:Study Session
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Start Three Sum bonus session in 15 minutes
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251015T080000
+DTEND:20251015T110000
+DTSTAMP:20251014T170000Z
+UID:meta-prep-6@interview
+SUMMARY:Trees (5 problems)
+DESCRIPTION:Meta Topic 6: Trees\n\nPre-work: Watch Binary Trees video (20 min)\nhttps://www.youtube.com/watch?v=oSWTXtMglKE\n\nProblems to solve:\n1. BST Insertion - BST operations\n2. Tree Height - Tree traversal\n3. Binary Tree Traversals ⭐ CRITICAL - Inorder\, Preorder\, Postorder\n4. Lowest Common Ancestor ⭐ CRITICAL - Tree navigation\n5. Min Heap Operations (QHeap1) - Priority queue\n\nFocus: DFS/BFS traversals\, tree properties\n\nFiles:\n- topics/05-trees/problems/bst-insertion.md\n- topics/05-trees/problems/tree-height.md\n- topics/05-trees/problems/tree-traversals.md\n- topics/05-trees/problems/lowest-common-ancestor.md\n- topics/05-trees/problems/min-heap-operations.md
+LOCATION:Study Session
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Start Trees session in 15 minutes
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251015T110000
+DTEND:20251015T130000
+DTSTAMP:20251014T170000Z
+UID:meta-prep-7@interview
+SUMMARY:Sorting Algorithms (2 problems)
+DESCRIPTION:Meta Topic 5: Sorting\n\nPre-work: Watch Merge Sort video (15 min)\nhttps://www.youtube.com/watch?v=TzeBrDU-JaY\n\nProblems to solve:\n1. Insertion Sort Part 2 - Understanding sorting\n2. Quicksort Part 2 - Partition algorithm\n\nFocus: Sorting fundamentals\, partition logic\, in-place sorting\n\nFiles:\n- topics/07-sorting-searching/problems/insertion-sort.md\n- topics/07-sorting-searching/problems/quicksort-partition.md
+LOCATION:Study Session
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Start Sorting session in 15 minutes
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251015T130000
+DTEND:20251015T150000
+DTSTAMP:20251014T170000Z
+UID:meta-prep-8@interview
+SUMMARY:Graphs - BFS & DFS (2 problems)
+DESCRIPTION:Meta Topic 7: Graphs\n\nPre-work: Watch Graph Traversal video (20 min)\nhttps://www.youtube.com/watch?v=zaBhtODEL0w\n\nProblems to solve:\n1. BFS Shortest Path - BFS implementation\n2. Snakes and Ladders - Game board as graph\n\nFocus: BFS/DFS patterns\, graph representation\, shortest path\n\nFiles:\n- topics/06-graphs/problems/bfs-shortest-path.md\n- topics/06-graphs/problems/snakes-and-ladders.md
+LOCATION:Study Session
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Start Graphs session in 15 minutes
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251015T150000
+DTEND:20251015T160000
+DTSTAMP:20251014T170000Z
+UID:meta-prep-9@interview
+SUMMARY:Recursion (1 problem)
+DESCRIPTION:Meta Topic 8: Recursion\n\nPre-work: Watch Recursion video (15 min)\nhttps://www.youtube.com/watch?v=KEEKn7Me-ms\n\nProblem to solve:\n1. Fibonacci Numbers - Classic recursion\n\nFocus: Base cases\, recursive thinking\, call stack\n\nFile:\n- topics/08-recursion/problems/recursion-fundamentals.md
+LOCATION:Study Session
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Start Recursion session in 15 minutes
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251015T160000
+DTEND:20251015T173000
+DTSTAMP:20251014T170000Z
+UID:meta-prep-10@interview
+SUMMARY:Mock Interview Practice
+DESCRIPTION:Simulate Real Interview Conditions\n\nPractice:\n- Pick 2-3 random problems from Meta's list\n- Solve on paper/whiteboard\n- Explain your approach OUT LOUD\n- Time yourself: 30-45 min per problem\n\nFocus on:\n- Clear communication\n- Asking clarifying questions\n- Testing with examples\n- Handling edge cases\n- Analyzing complexity
+LOCATION:Study Session
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Start Mock Interview in 15 minutes
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251015T173000
+DTEND:20251015T180000
+DTSTAMP:20251014T170000Z
+UID:meta-prep-11@interview
+SUMMARY:Final Review + Climbing Stairs
+DESCRIPTION:Final Preparation\n\nBonus Problem:\n1. Climbing Stairs ⭐ - Simplest DP problem\n\nFile:\n- topics/09-dynamic-programming/problems/climbing-stairs.md\n\nThen:\n- Review all 23 problems\n- Create pattern cheat sheet\n- Review complexity analysis\n- Mental preparation\n- Get good sleep!\n\nYou've got this! 💪
+LOCATION:Study Session
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Final review session in 15 minutes
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251015T180000
+DTEND:20251015T180000
+DTSTAMP:20251014T170000Z
+UID:meta-prep-12@interview
+SUMMARY:🎯 INTERVIEW TIME - You're Ready!
+DESCRIPTION:Meta Technical Interview\n\nYou've prepared 23 problems:\n✅ All 17 Meta required problems\n✅ 6 critical additions\n\nRemember:\n- Communicate your thinking\n- Ask clarifying questions\n- Start with brute force\, then optimize\n- Test with examples\n- Analyze time/space complexity\n- Stay calm and confident\n\nYou've got this! 🚀
+LOCATION:Interview
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Interview in 30 minutes - Review your pattern cheat sheet!
+END:VALARM
+END:VEVENT
+
+END:VCALENDAR

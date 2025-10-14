@@ -11,10 +11,17 @@ Analyze this code and determine its time complexity:
 ```javascript
 function mystery1(n) {
     let count = 0;
+    // Loop continues while i > 0
+    // Key insight: i is divided by 2 each iteration (halving)
     for (let i = n; i > 0; i = Math.floor(i / 2)) {
-        count++;
+        count++;  // Increment happens BEFORE division
+        // When i = 1: count increments, then i becomes Math.floor(1/2) = 0
+        // This is why we count the i=1 iteration before loop exits
     }
     return count;
+    // Returns: floor(log₂(n)) + 1
+    // This equals the number of bits needed to represent n in binary
+    // Example: n=8 (binary: 1000) returns 4
 }
 ```
 
@@ -130,23 +137,31 @@ for (let i = 1; i < n; i = i * 2) {
 ### Pattern 3: Binary Search
 ```javascript
 function binarySearch(arr, target) {
-    let left = 0, right = arr.length - 1;
+    // Initialize pointers to search range
+    let left = 0;                    // Start at first index (0)
+    let right = arr.length - 1;      // End at last index (length - 1, not length!)
+                                     // Arrays are 0-indexed: [0, 1, 2, ..., n-1]
+                                     // If arr.length = 5, valid indices are 0-4
     
-    while (left <= right) {
-        let mid = Math.floor((left + right) / 2);
+    while (left <= right) {          // Continue while search range is valid
+        // Find middle index of current range
+        let mid = Math.floor((left + right) / 2);  // Math.floor ensures integer
         
-        if (arr[mid] === target) return mid;
+        if (arr[mid] === target) return mid;  // Found it! Return index
         
-        // Eliminate half
-        if (arr[mid] < target) {
-            left = mid + 1;
-        } else {
-            right = mid - 1;
+        // Eliminate half of the search space
+        if (arr[mid] < target) {     // Target is in right half
+            left = mid + 1;          // Move left pointer past mid
+        } else {                     // Target is in left half (arr[mid] > target)
+            right = mid - 1;         // Move right pointer before mid
         }
     }
-    return -1;
+    return -1;  // Target not found after exhausting search space
 }
-// Time: O(log n) - cutting search space in half each time
+// Time: O(log n) - cutting search space in half each iteration
+// Example: [1,3,5,7,9] searching for 7
+//   Step 1: left=0, right=4, mid=2, arr[2]=5 < 7 → left=3
+//   Step 2: left=3, right=4, mid=3, arr[3]=7 ✓ Found!
 ```
 
 ## 🚫 Common Mistakes

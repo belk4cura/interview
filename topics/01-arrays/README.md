@@ -32,65 +32,205 @@ Arrays are the most fundamental data structure in computer science. They store e
 
 ### 1. Two Pointers
 Use two pointers moving toward each other or in the same direction.
+
 ```javascript
 // Example: Check if array is palindrome
 function isPalindrome(arr) {
-    let left = 0, right = arr.length - 1;
-    while (left < right) {
-        if (arr[left] !== arr[right]) return false;
-        left++;
-        right--;
+    let left = 0;                    // Start at beginning
+    let right = arr.length - 1;      // Start at end
+    
+    while (left < right) {           // Move pointers toward center
+        if (arr[left] !== arr[right]) return false;  // Mismatch = not palindrome
+        left++;      // Move left pointer right →
+        right--;     // Move right pointer left ←
     }
-    return true;
+    return true;     // All matched = palindrome!
 }
+```
+
+**Visual Example - Palindrome:**
+```
+isPalindrome([1, 2, 3, 2, 1])
+
+Step 1:  [1, 2, 3, 2, 1]
+          ↑           ↑
+        left        right
+        1 === 1 ✓ Continue
+
+Step 2:  [1, 2, 3, 2, 1]
+             ↑     ↑
+           left  right
+           2 === 2 ✓ Continue
+
+Step 3:  [1, 2, 3, 2, 1]
+                ↑
+            left/right meet
+            Done! Return true
+```
+
+**Visual Example - Non-Palindrome:**
+```
+isPalindrome([1, 2, 3, 4, 5])
+
+Step 1:  [1, 2, 3, 4, 5]
+          ↑           ↑
+        left        right
+        1 !== 5 ✗ Return false immediately!
 ```
 
 ### 2. Sliding Window
 Maintain a window of elements for substring/subarray problems.
+
 ```javascript
 // Example: Maximum sum of k consecutive elements
 function maxSumSubarray(arr, k) {
     let sum = 0, maxSum = 0;
-    // Initial window
-    for (let i = 0; i < k; i++) sum += arr[i];
-    maxSum = sum;
-    // Slide window
-    for (let i = k; i < arr.length; i++) {
-        sum = sum - arr[i - k] + arr[i];
-        maxSum = Math.max(maxSum, sum);
+    
+    // Build initial window of size k
+    for (let i = 0; i < k; i++) {
+        sum += arr[i];  // Add first k elements
     }
+    maxSum = sum;  // First window sum is our initial max
+    
+    // Slide the window: remove leftmost, add rightmost
+    for (let i = k; i < arr.length; i++) {
+        sum = sum - arr[i - k] + arr[i];  // Remove left, add right
+        maxSum = Math.max(maxSum, sum);   // Update max if needed
+    }
+    
     return maxSum;
 }
 ```
 
+**Visual Example:** `maxSumSubarray([2, 1, 5, 1, 3, 2], k=3)`
+```
+Initial Window (k=3):
+[2, 1, 5, 1, 3, 2]
+ └──┬──┘
+   sum = 2+1+5 = 8, maxSum = 8
+
+Slide 1: Remove 2, Add 1
+[2, 1, 5, 1, 3, 2]
+    └──┬──┘
+   sum = 8-2+1 = 7, maxSum = 8
+
+Slide 2: Remove 1, Add 3
+[2, 1, 5, 1, 3, 2]
+       └──┬──┘
+   sum = 7-1+3 = 9, maxSum = 9 ← New max!
+
+Slide 3: Remove 5, Add 2
+[2, 1, 5, 1, 3, 2]
+          └──┬──┘
+   sum = 9-5+2 = 6, maxSum = 9
+
+Result: 9
+```
+
 ### 3. Prefix Sums
 Precompute cumulative sums for range queries.
+
 ```javascript
 // Build prefix sum array
 function buildPrefixSum(arr) {
-    const prefix = [0];
+    const prefix = [0];  // Start with 0 for easier calculation
+    
+    // Each element stores sum of all elements up to that index
     for (let i = 0; i < arr.length; i++) {
-        prefix[i + 1] = prefix[i] + arr[i];
+        prefix[i + 1] = prefix[i] + arr[i];  // Add current element to previous sum
     }
+    
     return prefix;
 }
-// Sum from index i to j: prefix[j+1] - prefix[i]
+
+// Get sum from index i to j in O(1) time
+// Formula: prefix[j+1] - prefix[i]
+```
+
+**Visual Example:** `buildPrefixSum([3, 1, 4, 1, 5])`
+```
+Original:  [3, 1, 4, 1, 5]
+Index:      0  1  2  3  4
+
+Building Prefix Array:
+prefix[0] = 0                    (base case)
+prefix[1] = 0 + 3 = 3           (sum up to index 0)
+prefix[2] = 3 + 1 = 4           (sum up to index 1)
+prefix[3] = 4 + 4 = 8           (sum up to index 2)
+prefix[4] = 8 + 1 = 9           (sum up to index 3)
+prefix[5] = 9 + 5 = 14          (sum up to index 4)
+
+Result: [0, 3, 4, 8, 9, 14]
+
+Range Query Examples:
+Sum from index 1 to 3: prefix[4] - prefix[1] = 9 - 3 = 6
+  → arr[1] + arr[2] + arr[3] = 1 + 4 + 1 = 6 ✓
+
+Sum from index 0 to 4: prefix[5] - prefix[0] = 14 - 0 = 14
+  → arr[0] + arr[1] + arr[2] + arr[3] + arr[4] = 3+1+4+1+5 = 14 ✓
 ```
 
 ### 4. Kadane's Algorithm
 Find maximum subarray sum.
+
 ```javascript
 function maxSubarraySum(arr) {
-    let maxSoFar = arr[0];
-    let maxEndingHere = arr[0];
+    let maxSoFar = arr[0];        // Best sum found so far (global max)
+    let maxEndingHere = arr[0];   // Best sum ending at current position (local max)
     
     for (let i = 1; i < arr.length; i++) {
+        // Either extend existing subarray or start fresh from current element
         maxEndingHere = Math.max(arr[i], maxEndingHere + arr[i]);
+        
+        // Update global maximum if current subarray is better
         maxSoFar = Math.max(maxSoFar, maxEndingHere);
     }
     
     return maxSoFar;
 }
+```
+
+**Visual Example:** `maxSubarraySum([-2, 1, -3, 4, -1, 2, 1, -5, 4])`
+```
+Index:     0   1   2   3   4   5   6   7   8
+Array:   [-2,  1, -3,  4, -1,  2,  1, -5,  4]
+
+Step-by-step trace:
+i=0: maxEndingHere = -2, maxSoFar = -2
+
+i=1: maxEndingHere = max(1, -2+1) = max(1, -1) = 1
+     maxSoFar = max(-2, 1) = 1
+     Decision: Start fresh at 1 (better than extending -2)
+
+i=2: maxEndingHere = max(-3, 1-3) = max(-3, -2) = -2
+     maxSoFar = max(1, -2) = 1
+     Decision: Extend from 1 (gives -2)
+
+i=3: maxEndingHere = max(4, -2+4) = max(4, 2) = 4
+     maxSoFar = max(1, 4) = 4
+     Decision: Start fresh at 4 (better than extending -2)
+
+i=4: maxEndingHere = max(-1, 4-1) = max(-1, 3) = 3
+     maxSoFar = max(4, 3) = 4
+     Decision: Extend from 4 (gives 3)
+
+i=5: maxEndingHere = max(2, 3+2) = max(2, 5) = 5
+     maxSoFar = max(4, 5) = 5
+     Decision: Extend (gives 5)
+
+i=6: maxEndingHere = max(1, 5+1) = max(1, 6) = 6
+     maxSoFar = max(5, 6) = 6 ← New maximum!
+     Decision: Extend (gives 6)
+
+i=7: maxEndingHere = max(-5, 6-5) = max(-5, 1) = 1
+     maxSoFar = max(6, 1) = 6
+     Decision: Extend (gives 1)
+
+i=8: maxEndingHere = max(4, 1+4) = max(4, 5) = 5
+     maxSoFar = max(6, 5) = 6
+     Decision: Extend (gives 5)
+
+Result: 6 (subarray [4, -1, 2, 1])
 ```
 
 ## 💡 JavaScript Array Methods
